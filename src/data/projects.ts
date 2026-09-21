@@ -17,7 +17,7 @@ export const projects: Project[] = [
     },
     url: 'https://www.circlefilm.app/',
     bgGradient: 'from-slate-50 to-slate-100',
-    images: ['/src/assets/images/Circle.png'],
+    images: ['/assets/images/Circle.png'],
     techStack: []
   },
   {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     },
     url: 'https://the-shed-l9h3.onrender.com/',
     bgGradient: 'from-zinc-50 to-zinc-100',
-    images: ['/src/assets/images/The Shed.png', '/src/assets/images/The Shed 2.png'],
+    images: ['/assets/images/The Shed.png', '/assets/images/The Shed 2.png'],
     techStack: []
   },
   {
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     },
     url: 'https://padel-academy-rho.vercel.app/',
     bgGradient: 'from-stone-50 to-stone-100',
-    images: ['/src/assets/images/Smash Padel.png', '/src/assets/images/Smash Padel 2.png'],
+    images: ['/assets/images/Smash Padel.png', '/assets/images/Smash Padel 2.png'],
     techStack: []
   },
   {
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     },
     url: 'https://nile-international.vercel.app/',
     bgGradient: 'from-slate-50 to-slate-100',
-    images: ['/src/assets/images/Nile International.png', '/src/assets/images/Nile International 2.png'],
+    images: ['/assets/images/Nile International.png', '/assets/images/Nile International 2.png'],
     techStack: []
   },
   {
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     },
     url: 'https://couples-story.vercel.app/',
     bgGradient: 'from-zinc-50 to-zinc-100',
-    images: ['/src/assets/images/Couple Story.png', '/src/assets/images/Couple Story 2.png', '/src/assets/images/Couple Story 3.png'],
+    images: ['/assets/images/Couple Story.png', '/assets/images/Couple Story 2.png', '/assets/images/Couple Story 3.png'],
     techStack: []
   },
   {
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     },
     url: 'https://artiste-restaurant.vercel.app/',
     bgGradient: 'from-stone-50 to-stone-100',
-    images: ['/src/assets/images/Artiste restaurant.png', '/src/assets/images/Artist restaurant 2.png'],
+    images: ['/assets/images/Artiste restaurant.png', '/assets/images/Artist restaurant 2.png'],
     techStack: []
   },
   {
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     },
     url: 'https://modern-clinic-one.vercel.app/',
     bgGradient: 'from-slate-50 to-slate-100',
-    images: ['/src/assets/images/Modern Clinic.png', '/src/assets/images/Modern Clinic2.png'],
+    images: ['/assets/images/Modern Clinic.png', '/assets/images/Modern Clinic2.png'],
     techStack: []
   }
 ];

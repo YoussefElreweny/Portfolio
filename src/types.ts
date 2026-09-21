@@ -7,7 +7,7 @@ export interface Project {
     en: string;
     ar: string;
   };
-  tagline: {
+  tagline?: {
     en: string;
     ar: string;
   };
@@ -15,20 +15,20 @@ export interface Project {
     en: string;
     ar: string;
   };
-  category: 'production' | 'prototype';
-  categoryLabel: {
+  category?: 'production' | 'prototype';
+  categoryLabel?: {
     en: string;
     ar: string;
   };
   url: string;
   techStack: string[];
-  features: {
+  features?: {
     en: string[];
     ar: string[];
   };
-  accentColor: string;
-  isProduction: boolean;
-  role: {
+  accentColor?: string;
+  isProduction?: boolean;
+  role?: {
     en: string;
     ar: string;
   };

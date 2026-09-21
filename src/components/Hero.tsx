@@ -55,9 +55,9 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-full lg:aspect-square overflow-hidden rounded-3xl bg-slate-100 border border-slate-200 shadow-2xl">
               <img
-                src="/src/assets/images/profile.jpeg"
+                src="/assets/images/profile.jpeg"
                 alt="Youssef Elreweny"
-                className="w-full h-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover object-top grayscale-[0.1] hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
             </div>
