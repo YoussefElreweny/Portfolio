@@ -80,11 +80,20 @@ export const leadership: TimelineEntry[] = [
 
 export const publications: Publication[] = [
   {
+    id: 'notre-dame',
+    title: 'Revolutionizing Heritage Conservation: The Transformative Impact of Drones in the Restoration and Preservation of Notre-Dame Cathedral',
+    authors: 'Abdelmoniem, A. M., Elreweny, Y. & Hany, M.',
+    venue: 'Shedet',
+    year: '2026',
+    status: 'peer-reviewed',
+    url: 'https://doi.org/10.21608/shedet.2025.389477.1305'
+  },
+  {
     id: 'coptic-museum',
     title: 'Preservation and Conservation Strategies of the Photographic Archive of the Coptic Museum in Cairo',
     authors: 'Shaheen, R. & Elreweny, Y.',
     venue: 'Springer — Lecture Notes in Mechanical Engineering (Florence Heri-Tech 2024)',
-    year: '2026',
+    year: '2025',
     status: 'peer-reviewed',
     url: 'https://doi.org/10.1007/978-3-031-98379-5_41'
   },
@@ -93,7 +102,7 @@ export const publications: Publication[] = [
     title: 'A Multispectral Examination to Identify Historical Photographs',
     authors: 'Eldabaa, M., Shaheen, R., Elreweny, Y. & Abdallah, M.',
     venue: 'Springer — Lecture Notes in Mechanical Engineering (Florence Heri-Tech 2024)',
-    year: '2026',
+    year: '2025',
     status: 'peer-reviewed',
     url: 'https://doi.org/10.1007/978-3-031-98379-5_17'
   },
@@ -105,14 +114,6 @@ export const publications: Publication[] = [
     year: '2023',
     status: 'peer-reviewed',
     url: 'https://doi.org/10.5194/isprs-archives-XLVIII-M-2-2023-1449-2023'
-  },
-  {
-    id: 'notre-dame',
-    title: 'Revolutionizing Heritage Conservation: The Transformative Impact of Drones in the Restoration and Preservation of Notre-Dame Cathedral',
-    authors: 'Elreweny, Y. & Abdelmonim, A. M.',
-    venue: 'Shedet Journal',
-    year: 'In press',
-    status: 'in-press'
   },
   {
     id: 'palestinian-archive',
@@ -173,8 +174,8 @@ export const awards: Award[] = [
     issuer: { en: 'Current Research in Egyptology — Tokyo, Japan', ar: 'مؤتمر أبحاث علم المصريات — طوكيو، اليابان' },
     year: '2026',
     description: {
-      en: 'Fully funded guest presenter for an AI-based OCR system for ancient Egyptian scripts.',
-      ar: 'متحدث بتمويل كامل لعرض نظام تعرف ضوئي على النصوص المصرية القديمة قائم على الذكاء الاصطناعي.'
+      en: "Funded by Japan's Agency for Cultural Affairs to present an AI-based OCR system for ancient Egyptian scripts.",
+      ar: 'بتمويل من وكالة الشؤون الثقافية اليابانية لعرض نظام تعرف ضوئي على النصوص المصرية القديمة قائم على الذكاء الاصطناعي.'
     }
   },
   {

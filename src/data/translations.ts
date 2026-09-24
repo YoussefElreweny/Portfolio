@@ -53,8 +53,8 @@ export const translations = {
       subtitle: 'My research sits at the intersection of computer engineering and cultural heritage — applying AI, computational imaging and software to document and preserve historical artifacts and archives.',
       orcid: 'View ORCID profile',
       stats: [
-        { value: '3', label: 'Peer-reviewed papers' },
-        { value: '2', label: 'Papers in press' },
+        { value: '4', label: 'Peer-reviewed papers' },
+        { value: '1', label: 'Paper in press' },
         { value: '6', label: 'International conferences' },
       ],
       peerReviewed: 'Peer-reviewed',
@@ -126,8 +126,8 @@ export const translations = {
       subtitle: 'تقع أبحاثي عند تقاطع هندسة الحاسبات والتراث الثقافي — توظيف الذكاء الاصطناعي والتصوير الحاسوبي والبرمجيات لتوثيق القطع والأرشيفات التاريخية والحفاظ عليها.',
       orcid: 'ملف ORCID',
       stats: [
-        { value: '3', label: 'أبحاث محكّمة منشورة' },
-        { value: '2', label: 'أبحاث قيد النشر' },
+        { value: '4', label: 'أبحاث محكّمة منشورة' },
+        { value: '1', label: 'بحث قيد النشر' },
         { value: '6', label: 'مؤتمرات دولية' },
       ],
       peerReviewed: 'أبحاث محكّمة',
