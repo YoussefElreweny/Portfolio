@@ -26,7 +26,7 @@ const socialLinks = [
   {
     id: 'linkedin',
     name: 'LinkedIn',
-    handle: 'linkedin.com/in/youssef-elreweny',
+    caption: { en: "Let's connect", ar: 'لنتواصل' },
     url: 'https://www.linkedin.com/in/youssef-elreweny',
     Logo: LinkedInLogo,
     logoClassName: 'w-10 h-10',
@@ -34,7 +34,7 @@ const socialLinks = [
   {
     id: 'github',
     name: 'GitHub',
-    handle: 'github.com/YoussefElreweny',
+    caption: { en: 'See my code', ar: 'شاهد أكوادي' },
     url: 'https://github.com/YoussefElreweny',
     Logo: GitHubLogo,
     logoClassName: 'w-10 h-10 text-slate-950',
@@ -81,7 +81,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
         </div>
 
         <div className="max-w-3xl mx-auto pt-12 grid gap-4 sm:grid-cols-2 text-start">
-          {socialLinks.map(({ id, name, handle, url, Logo, logoClassName }) => (
+          {socialLinks.map(({ id, name, caption, url, Logo, logoClassName }) => (
             <a
               key={id}
               href={url}
@@ -93,7 +93,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
               <Logo className={`${logoClassName} shrink-0`} />
               <div className="min-w-0 flex-1">
                 <p className="font-bold text-slate-950">{name}</p>
-                <p className="text-sm text-slate-500 truncate" dir="ltr">{handle}</p>
+                <p className="text-sm text-slate-500">{caption[language]}</p>
               </div>
               <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-slate-950 transition-colors shrink-0" />
             </a>
