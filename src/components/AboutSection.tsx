@@ -21,6 +21,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
             <p className="text-lg text-slate-600 leading-relaxed text-balance">
               {t.about.text}
             </p>
+            <div className="pt-4 space-y-3">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">
+                {t.about.languagesTitle}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {t.about.languages.map((lang) => (
+                  <span
+                    key={lang}
+                    className="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-sm font-semibold text-slate-700"
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* What I do */}

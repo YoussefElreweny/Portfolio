@@ -71,3 +71,36 @@ export interface SkillCategory {
   skills: string[];
   iconName: string;
 }
+
+export interface Localized {
+  en: string;
+  ar: string;
+}
+
+export interface TimelineEntry {
+  id: string;
+  role: Localized;
+  organization: Localized;
+  period: Localized;
+  description: Localized;
+}
+
+export type PublicationStatus = 'peer-reviewed' | 'in-press' | 'talk';
+
+export interface Publication {
+  id: string;
+  title: string;
+  authors: string;
+  venue: string;
+  year: string;
+  status: PublicationStatus;
+  url?: string;
+}
+
+export interface Award {
+  id: string;
+  title: Localized;
+  issuer: Localized;
+  year: string;
+  description: Localized;
+}

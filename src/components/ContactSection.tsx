@@ -2,6 +2,8 @@ import React from 'react';
 import { Mail, ArrowRight, ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { Language } from '../types.ts';
 import { translations } from '../data/translations.ts';
+import { orcidUrl } from '../data/profile.ts';
+import { OrcidLogo } from './ResearchSection.tsx';
 
 const LinkedInLogo: React.FC<{ className?: string }> = ({ className }) => (
   <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
@@ -38,6 +40,14 @@ const socialLinks = [
     url: 'https://github.com/YoussefElreweny',
     Logo: GitHubLogo,
     logoClassName: 'w-10 h-10 text-slate-950',
+  },
+  {
+    id: 'orcid',
+    name: 'ORCID',
+    caption: { en: 'My research', ar: 'أبحاثي' },
+    url: orcidUrl,
+    Logo: OrcidLogo,
+    logoClassName: 'w-10 h-10',
   },
 ];
 
@@ -80,7 +90,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto pt-12 grid gap-4 sm:grid-cols-2 text-start">
+        <div className="max-w-4xl mx-auto pt-12 grid gap-4 sm:grid-cols-3 text-start">
           {socialLinks.map(({ id, name, caption, url, Logo, logoClassName }) => (
             <a
               key={id}

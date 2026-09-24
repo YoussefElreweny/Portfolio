@@ -26,17 +26,19 @@ export const Navbar: React.FC<NavbarProps> = ({
           <a
             href="#"
             id="nav-brand"
-            className="text-lg font-bold tracking-tight text-slate-950"
+            className="text-lg font-bold tracking-tight text-slate-950 whitespace-nowrap"
           >
             {t.brand}
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-10">
-            <nav className="flex items-center gap-8 text-sm font-bold text-slate-500">
+          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+            <nav className="flex items-center gap-6 xl:gap-8 text-sm font-bold text-slate-500">
               <a href="#about" className="hover:text-slate-950 transition-colors uppercase tracking-widest">{t.about}</a>
               <a href="#projects" className="hover:text-slate-950 transition-colors uppercase tracking-widest">{t.projects}</a>
               <a href="#technical" className="hover:text-slate-950 transition-colors uppercase tracking-widest">{t.technical}</a>
+              <a href="#experience" className="hover:text-slate-950 transition-colors uppercase tracking-widest">{t.experience}</a>
+              <a href="#research" className="hover:text-slate-950 transition-colors uppercase tracking-widest">{t.research}</a>
               <a href="#contact" className="hover:text-slate-950 transition-colors uppercase tracking-widest">{t.contact}</a>
             </nav>
 
@@ -53,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile Menu Btn */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-slate-950"
+            className="lg:hidden p-2 text-slate-950"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -62,10 +64,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-100 px-6 py-12 space-y-8 animate-in fade-in slide-in-from-top-4">
+        <div className="lg:hidden bg-white border-b border-slate-100 px-6 py-12 space-y-8 animate-in fade-in slide-in-from-top-4">
           <nav className="flex flex-col space-y-6 text-2xl font-bold text-slate-950">
             <a href="#projects" onClick={() => setMobileMenuOpen(false)}>{t.projects}</a>
             <a href="#technical" onClick={() => setMobileMenuOpen(false)}>{t.technical}</a>
+            <a href="#experience" onClick={() => setMobileMenuOpen(false)}>{t.experience}</a>
+            <a href="#research" onClick={() => setMobileMenuOpen(false)}>{t.research}</a>
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>{t.about}</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)}>{t.contact}</a>
           </nav>

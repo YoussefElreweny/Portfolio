@@ -4,10 +4,13 @@ import { Hero } from './components/Hero.tsx';
 import { AboutSection } from './components/AboutSection.tsx';
 import { FeaturedProjects } from './components/FeaturedProjects.tsx';
 import { TechnicalWork } from './components/TechnicalWork.tsx';
+import { ExperienceSection } from './components/ExperienceSection.tsx';
+import { ResearchSection } from './components/ResearchSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { WhatsAppButton } from './components/WhatsAppButton.tsx';
 import { projects, technicalProjects } from './data/projects.ts';
+import { experience, leadership, publications, awards } from './data/profile.ts';
 import { Language } from './types.ts';
 
 export default function App() {
@@ -49,6 +52,18 @@ export default function App() {
 
         <TechnicalWork
           projects={technicalProjects}
+          language={language}
+        />
+
+        <ExperienceSection
+          experience={experience}
+          leadership={leadership}
+          language={language}
+        />
+
+        <ResearchSection
+          publications={publications}
+          awards={awards}
           language={language}
         />
 
