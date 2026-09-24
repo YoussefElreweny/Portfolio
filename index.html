@@ -3,28 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youssef Elreweny</title>
-    <meta name="description" content="Professional portfolio of Youssef Elreweny - Software Engineer specializing in Java, Spring Boot, and Node.js. View engineering projects and client work." />
+    <title>Youssef Elreweny | Software Engineer &amp; Full-Stack Developer</title>
+    <meta name="description" content="Youssef Elreweny (يوسف الرويني) is a Software Engineer and Ain Shams University Computer Engineering graduate specializing in Java, Spring Boot, Node.js and full-stack web development. View projects and client work." />
+    <meta name="author" content="Youssef Elreweny" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#020617" />
+    <link rel="canonical" href="https://youssef-elreweny.vercel.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/images/profile.jpeg" />
+
+    <meta property="og:site_name" content="Youssef Elreweny" />
     <meta property="og:title" content="Youssef Elreweny | Software Engineer" />
-    <meta property="og:description" content="Professional portfolio of Youssef Elreweny - Software Engineer specializing in Java, Spring Boot, and Node.js." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/assets/images/profile.jpeg" />
+    <meta property="og:description" content="Portfolio of Youssef Elreweny - Software Engineer specializing in Java, Spring Boot, Node.js and full-stack web development." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://youssef-elreweny.vercel.app/" />
+    <meta property="og:image" content="https://youssef-elreweny.vercel.app/assets/images/profile.jpeg" />
+    <meta property="og:image:alt" content="Youssef Elreweny" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_EG" />
+    <meta property="profile:first_name" content="Youssef" />
+    <meta property="profile:last_name" content="Elreweny" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Youssef Elreweny | Software Engineer" />
-    <meta name="twitter:description" content="Professional portfolio of Youssef Elreweny - Software Engineer specializing in Java, Spring Boot, and Node.js." />
-    <link rel="canonical" href="https://youssef-elreweny.vercel.app/" />
+    <meta name="twitter:description" content="Portfolio of Youssef Elreweny - Software Engineer specializing in Java, Spring Boot, Node.js and full-stack web development." />
+    <meta name="twitter:image" content="https://youssef-elreweny.vercel.app/assets/images/profile.jpeg" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Youssef Elreweny",
-      "jobTitle": "Software Engineer",
-      "url": "https://youssef-elreweny.vercel.app",
-      "sameAs": [
-        "https://github.com/youssefelreweny",
-        "https://linkedin.com/in/youssef-elreweny"
-      ],
-      "description": "Software Engineer specializing in Java, Spring Boot, Node.js, and Full-Stack development."
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://youssef-elreweny.vercel.app/#website",
+          "url": "https://youssef-elreweny.vercel.app/",
+          "name": "Youssef Elreweny",
+          "inLanguage": ["en", "ar"],
+          "publisher": { "@id": "https://youssef-elreweny.vercel.app/#person" }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://youssef-elreweny.vercel.app/#profile",
+          "url": "https://youssef-elreweny.vercel.app/",
+          "name": "Youssef Elreweny | Software Engineer & Full-Stack Developer",
+          "isPartOf": { "@id": "https://youssef-elreweny.vercel.app/#website" },
+          "mainEntity": { "@id": "https://youssef-elreweny.vercel.app/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://youssef-elreweny.vercel.app/#person",
+          "name": "Youssef Elreweny",
+          "alternateName": ["Youssef El-Reweny", "Youssef Reweny", "يوسف الرويني"],
+          "jobTitle": "Software Engineer",
+          "url": "https://youssef-elreweny.vercel.app/",
+          "image": "https://youssef-elreweny.vercel.app/assets/images/profile.jpeg",
+          "email": "mailto:y_reweny@yahoo.com",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Ain Shams University",
+            "sameAs": "https://en.wikipedia.org/wiki/Ain_Shams_University"
+          },
+          "knowsAbout": ["Java", "Spring Boot", "Node.js", "React", "PostgreSQL", "REST APIs", "Full-Stack Web Development"],
+          "knowsLanguage": ["en", "ar"],
+          "sameAs": [
+            "https://github.com/YoussefElreweny",
+            "https://linkedin.com/in/youssef-elreweny"
+          ],
+          "description": "Software Engineer and Computer Engineering graduate of Ain Shams University, specializing in Java, Spring Boot, Node.js, and full-stack web development."
+        }
+      ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,8 +78,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-white text-slate-950 antialiased selection:bg-slate-950 selection:text-white">
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Static fallback content. React replaces this as soon as the app loads,
+        but search engines and link previews read it directly from the HTML.
+      -->
+      <main style="max-width:48rem;margin:0 auto;padding:4rem 1.5rem;font-family:'Plus Jakarta Sans',system-ui,sans-serif">
+        <h1>Youssef Elreweny — Software Engineer &amp; Full-Stack Developer</h1>
+        <p>Computer Engineering graduate of Ain Shams University. I build high-performance web applications and backend systems with Java, Spring Boot, Node.js and React, including bilingual English/Arabic platforms.</p>
+        <h2>Selected Work</h2>
+        <ul>
+          <li><a href="https://www.circlefilm.app/">Circle Film</a> — event-based media sharing platform, live in production.</li>
+          <li><a href="https://the-shed-l9h3.onrender.com/">The Shed</a> — real-time coworking space reservation platform.</li>
+          <li><a href="https://padel-academy-rho.vercel.app/">Smash Padel</a> — padel academy and court booking system.</li>
+          <li><a href="https://nile-international.vercel.app/">Nile International</a> — corporate logistics and trade platform.</li>
+          <li>Couples Story, Artiste Restaurant and Modern Clinic — client web prototypes.</li>
+        </ul>
+        <h2>Engineering &amp; Systems</h2>
+        <ul>
+          <li>Event Check-In System — REST API backend built with Java 21, Spring Boot and PostgreSQL.</li>
+          <li>E-Commerce Platform Core — JWT authentication, Spring Data JPA and Hibernate.</li>
+        </ul>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:y_reweny@yahoo.com">y_reweny@yahoo.com</a> · <a href="https://github.com/YoussefElreweny">GitHub</a></p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
