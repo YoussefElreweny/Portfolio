@@ -82,7 +82,7 @@ export const publications: Publication[] = [
   {
     id: 'notre-dame',
     title: 'Revolutionizing Heritage Conservation: The Transformative Impact of Drones in the Restoration and Preservation of Notre-Dame Cathedral',
-    authors: 'Abdelmoniem, A. M., Elreweny, Y. & Hany, M.',
+    authors: 'Abdelmoniem, A. M., Elreweny, Y., Shaheen, R. & Hany, M.',
     venue: 'Shedet',
     year: '2026',
     status: 'peer-reviewed',
