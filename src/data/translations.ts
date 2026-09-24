@@ -13,7 +13,9 @@ export const translations = {
     hero: {
       greeting: "I'm Youssef Elreweny",
       role: 'Computer Engineer & Developer',
-      subheadline: 'Crafting high-performance web applications and digital experiences with an engineering focus. Alum of Ain Shams University.',
+      subheadline: 'Crafting high-performance web applications and digital experiences with an engineering focus.',
+      degree: 'B.Sc. Computer & Systems Engineering',
+      school: 'Faculty of Engineering, Ain Shams University · 2021 – 2026',
       cta: 'View Work',
     },
     whatIDo: {
@@ -62,6 +64,9 @@ export const translations = {
       talks: 'Conference talks & posters',
       readPaper: 'Read paper',
       awardsTitle: 'Awards & Grants',
+      featured: 'Selected publications',
+      viewAll: 'All publications, talks & awards',
+      backHome: 'Back to home',
     },
     contact: {
       title: 'Get in Touch',
@@ -86,7 +91,9 @@ export const translations = {
     hero: {
       greeting: 'أنا يوسف الرويني',
       role: 'مهندس حاسبات ومطور برمجيات',
-      subheadline: 'أقوم ببناء تطبيقات ويب متقدمة وتجارب رقمية بمنظور هندسي. خريج جامعة عين شمس.',
+      subheadline: 'أقوم ببناء تطبيقات ويب متقدمة وتجارب رقمية بمنظور هندسي.',
+      degree: 'بكالوريوس هندسة الحاسبات والنظم',
+      school: 'كلية الهندسة، جامعة عين شمس · 2021 – 2026',
       cta: 'مشاهدة الأعمال',
     },
     whatIDo: {
@@ -135,6 +142,9 @@ export const translations = {
       talks: 'عروض وملصقات في مؤتمرات',
       readPaper: 'قراءة البحث',
       awardsTitle: 'الجوائز والمنح',
+      featured: 'أبحاث مختارة',
+      viewAll: 'كل الأبحاث والعروض والجوائز',
+      backHome: 'العودة للرئيسية',
     },
     contact: {
       title: 'تواصل معي',

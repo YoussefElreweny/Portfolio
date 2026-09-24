@@ -5,6 +5,7 @@ export const orcidUrl = 'https://orcid.org/0009-0009-6094-0380';
 export const experience: TimelineEntry[] = [
   {
     id: 'rowad',
+    logo: '/assets/logos/rowad.png',
     role: { en: 'IT Department Intern', ar: 'متدرب بقسم تكنولوجيا المعلومات' },
     organization: { en: 'Rowad Modern Engineering', ar: 'رواد الهندسة الحديثة' },
     period: { en: 'Jul 2026', ar: 'يوليو 2026' },
@@ -15,6 +16,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: 'tmg',
+    logo: '/assets/logos/tmg.png',
     role: { en: 'IT Infrastructure Intern', ar: 'متدرب البنية التحتية لتكنولوجيا المعلومات' },
     organization: { en: 'Talaat Mostafa Group (TMG)', ar: 'مجموعة طلعت مصطفى' },
     period: { en: 'Sep 2025', ar: 'سبتمبر 2025' },
@@ -25,6 +27,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: 'orange',
+    logo: '/assets/logos/orange.png',
     role: { en: 'Access Transmission & Network Infrastructure Intern', ar: 'متدرب شبكات النفاذ والبنية التحتية' },
     organization: { en: 'Orange Egypt', ar: 'أورنج مصر' },
     period: { en: 'Sep 2024', ar: 'سبتمبر 2024' },
@@ -35,6 +38,7 @@ export const experience: TimelineEntry[] = [
   },
   {
     id: 'cib',
+    logo: '/assets/logos/cib.png',
     role: { en: 'Digital Transformation Summer Intern', ar: 'متدرب صيفي في التحول الرقمي' },
     organization: { en: 'CIB Egypt', ar: 'البنك التجاري الدولي CIB' },
     period: { en: 'Jul 2024', ar: 'يوليو 2024' },
@@ -48,6 +52,7 @@ export const experience: TimelineEntry[] = [
 export const leadership: TimelineEntry[] = [
   {
     id: 'aces-president',
+    logo: '/assets/logos/aces.png',
     role: { en: 'President', ar: 'رئيس النشاط' },
     organization: { en: 'ACES Student Activity — Ain Shams University', ar: 'نشاط ACES الطلابي — جامعة عين شمس' },
     period: { en: 'Oct 2024 – Oct 2025', ar: 'أكتوبر 2024 – أكتوبر 2025' },
@@ -58,6 +63,7 @@ export const leadership: TimelineEntry[] = [
   },
   {
     id: 'graduation',
+    logo: '/assets/logos/ain-shams.png',
     role: { en: 'Graduation Ceremony Organizer', ar: 'منظم حفل التخرج' },
     organization: { en: 'Ain Shams University', ar: 'جامعة عين شمس' },
     period: { en: 'Sep 2024', ar: 'سبتمبر 2024' },
@@ -68,6 +74,7 @@ export const leadership: TimelineEntry[] = [
   },
   {
     id: 'ieee',
+    logo: '/assets/logos/ieee-asu.png',
     role: { en: 'Fundraising Member', ar: 'عضو لجنة التمويل' },
     organization: { en: 'IEEE Ain Shams University Student Branch', ar: 'فرع IEEE الطلابي بجامعة عين شمس' },
     period: { en: 'Sep 2023 – Jul 2024', ar: 'سبتمبر 2023 – يوليو 2024' },

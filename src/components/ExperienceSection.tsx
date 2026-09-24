@@ -20,16 +20,27 @@ const Timeline: React.FC<{
       <div className="p-2.5 bg-slate-950 text-white rounded-xl">{icon}</div>
       <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">{title}</h3>
     </div>
-    <ol className="relative border-s border-slate-200 space-y-10">
+    <ol className="space-y-10">
       {entries.map((entry) => (
-        <li key={entry.id} className="ps-8 relative">
-          <span className="absolute -start-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-950 ring-4 ring-white" />
-          <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
-            {entry.period[language]}
-          </p>
-          <h4 className="text-lg font-bold text-slate-950 leading-snug">{entry.role[language]}</h4>
-          <p className="text-sm font-semibold text-slate-500 mb-3">{entry.organization[language]}</p>
-          <p className="text-slate-600 leading-relaxed">{entry.description[language]}</p>
+        <li key={entry.id} className="flex gap-5">
+          <div className="shrink-0 w-14 h-14 rounded-2xl bg-white border border-slate-200 shadow-sm p-2 flex items-center justify-center">
+            {entry.logo && (
+              <img
+                src={entry.logo}
+                alt={`${entry.organization.en} logo`}
+                className="max-w-full max-h-full object-contain"
+                loading="lazy"
+              />
+            )}
+          </div>
+          <div className="min-w-0">
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1.5">
+              {entry.period[language]}
+            </p>
+            <h4 className="text-lg font-bold text-slate-950 leading-snug">{entry.role[language]}</h4>
+            <p className="text-sm font-semibold text-slate-500 mb-3">{entry.organization[language]}</p>
+            <p className="text-slate-600 leading-relaxed">{entry.description[language]}</p>
+          </div>
         </li>
       ))}
     </ol>

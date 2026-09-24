@@ -1,10 +1,10 @@
 import React from 'react';
-import { ArrowUpRight, Award as AwardIcon, BookOpen, Clock, Mic } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Award as AwardIcon, BookOpen, Clock, Mic } from 'lucide-react';
 import { Award, Language, Publication, PublicationStatus } from '../types.ts';
 import { translations } from '../data/translations.ts';
 import { orcidUrl } from '../data/profile.ts';
 
-interface ResearchSectionProps {
+interface ResearchProps {
   publications: Publication[];
   awards: Award[];
   language: Language;
@@ -64,8 +64,97 @@ const PublicationItem: React.FC<{ publication: Publication; readLabel: string }>
   </li>
 );
 
-export const ResearchSection: React.FC<ResearchSectionProps> = ({ publications, awards, language }) => {
+const ResearchHeader: React.FC<{ language: Language; as: 'h1' | 'h2' }> = ({ language, as: Heading }) => {
   const t = translations[language].research;
+  return (
+    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+      <div className="max-w-2xl">
+        <Heading className="text-4xl font-bold tracking-tight text-slate-950 mb-4">{t.title}</Heading>
+        <p className="text-lg text-slate-600 leading-relaxed">{t.subtitle}</p>
+      </div>
+      <a
+        href={orcidUrl}
+        target="_blank"
+        rel="me noopener noreferrer"
+        className="inline-flex items-center gap-3 self-start lg:self-auto shrink-0 px-6 py-3 rounded-full bg-white border border-slate-200 font-bold text-slate-950 hover:border-slate-950 hover:shadow-lg transition-all"
+      >
+        <OrcidLogo className="w-6 h-6" />
+        {t.orcid}
+        <ArrowUpRight className="w-4 h-4 text-slate-400" />
+      </a>
+    </div>
+  );
+};
+
+const ResearchStats: React.FC<{ language: Language }> = ({ language }) => (
+  <div className="grid grid-cols-3 gap-4 sm:gap-8 mb-16">
+    {translations[language].research.stats.map((stat) => (
+      <div key={stat.label} className="bg-white rounded-3xl border border-slate-200 p-5 sm:p-8">
+        <p className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950">{stat.value}</p>
+        <p className="mt-2 text-xs sm:text-sm font-semibold text-slate-500">{stat.label}</p>
+      </div>
+    ))}
+  </div>
+);
+
+const PublicationGroup: React.FC<{
+  title: string;
+  icon: React.ReactNode;
+  items: Publication[];
+  readLabel: string;
+}> = ({ title, icon, items, readLabel }) => (
+  <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10">
+    <div className="flex items-center gap-3 mb-8">
+      <div className="p-2.5 bg-slate-950 text-white rounded-xl">{icon}</div>
+      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">{title}</h3>
+    </div>
+    <ul className="divide-y divide-slate-100">
+      {items.map((publication) => (
+        <PublicationItem key={publication.id} publication={publication} readLabel={readLabel} />
+      ))}
+    </ul>
+  </div>
+);
+
+/** Short research summary shown on the home page, linking to the full /research page. */
+export const ResearchPreview: React.FC<{ publications: Publication[]; language: Language }> = ({
+  publications,
+  language,
+}) => {
+  const t = translations[language].research;
+  const Arrow = language === 'ar' ? ArrowLeft : ArrowRight;
+  const featured = publications.filter((p) => p.status === 'peer-reviewed').slice(0, 2);
+
+  return (
+    <section id="research" className="py-24 sm:py-32 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <ResearchHeader language={language} as="h2" />
+        <ResearchStats language={language} />
+        <PublicationGroup
+          title={t.featured}
+          icon={<BookOpen className="w-5 h-5" />}
+          items={featured}
+          readLabel={t.readPaper}
+        />
+        <div className="mt-10">
+          <a
+            href="/research"
+            id="research-view-all"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-950 text-white font-bold text-lg hover:bg-slate-800 transition-all group"
+          >
+            {t.viewAll}
+            <Arrow className="w-5 h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/** Full research page: every publication, talk and award. */
+export const ResearchPage: React.FC<ResearchProps> = ({ publications, awards, language }) => {
+  const t = translations[language].research;
+  const BackArrow = language === 'ar' ? ArrowRight : ArrowLeft;
 
   const groups: { status: PublicationStatus; title: string; icon: React.ReactNode }[] = [
     { status: 'peer-reviewed', title: t.peerReviewed, icon: <BookOpen className="w-5 h-5" /> },
@@ -74,56 +163,28 @@ export const ResearchSection: React.FC<ResearchSectionProps> = ({ publications, 
   ];
 
   return (
-    <section id="research" className="py-24 sm:py-32 bg-slate-50">
+    <section id="research" className="pt-32 sm:pt-40 pb-24 sm:pb-32 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl font-bold tracking-tight text-slate-950 mb-4">{t.title}</h2>
-            <p className="text-lg text-slate-600 leading-relaxed">{t.subtitle}</p>
-          </div>
-          <a
-            href={orcidUrl}
-            target="_blank"
-            rel="me noopener noreferrer"
-            className="inline-flex items-center gap-3 self-start lg:self-auto shrink-0 px-6 py-3 rounded-full bg-white border border-slate-200 font-bold text-slate-950 hover:border-slate-950 hover:shadow-lg transition-all"
-          >
-            <OrcidLogo className="w-6 h-6" />
-            {t.orcid}
-            <ArrowUpRight className="w-4 h-4 text-slate-400" />
-          </a>
-        </div>
-
-        <div className="grid grid-cols-3 gap-4 sm:gap-8 mb-16">
-          {t.stats.map((stat) => (
-            <div key={stat.label} className="bg-white rounded-3xl border border-slate-200 p-5 sm:p-8">
-              <p className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950">{stat.value}</p>
-              <p className="mt-2 text-xs sm:text-sm font-semibold text-slate-500">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+        <a
+          href="/"
+          className="inline-flex items-center gap-2 mb-10 text-sm font-bold text-slate-500 hover:text-slate-950 transition-colors"
+        >
+          <BackArrow className="w-4 h-4" />
+          {t.backHome}
+        </a>
+        <ResearchHeader language={language} as="h1" />
+        <ResearchStats language={language} />
 
         <div className="space-y-8">
           {groups.map(({ status, title, icon }) => {
             const items = publications.filter((p) => p.status === status);
             if (items.length === 0) return null;
-            return (
-              <div key={status} className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10">
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="p-2.5 bg-slate-950 text-white rounded-xl">{icon}</div>
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">{title}</h3>
-                </div>
-                <ul className="divide-y divide-slate-100">
-                  {items.map((publication) => (
-                    <PublicationItem key={publication.id} publication={publication} readLabel={t.readPaper} />
-                  ))}
-                </ul>
-              </div>
-            );
+            return <PublicationGroup key={status} title={title} icon={icon} items={items} readLabel={t.readPaper} />;
           })}
         </div>
 
         <div id="awards" className="mt-24">
-          <h3 className="text-3xl font-bold tracking-tight text-slate-950 mb-10">{t.awardsTitle}</h3>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-950 mb-10">{t.awardsTitle}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {awards.map((award) => (
               <div
@@ -136,7 +197,7 @@ export const ResearchSection: React.FC<ResearchSectionProps> = ({ publications, 
                   </div>
                   <span className="text-xs font-bold uppercase tracking-widest text-slate-400">{award.year}</span>
                 </div>
-                <h4 className="text-lg font-bold text-slate-950 leading-snug mb-1">{award.title[language]}</h4>
+                <h3 className="text-lg font-bold text-slate-950 leading-snug mb-1">{award.title[language]}</h3>
                 <p className="text-sm font-semibold text-slate-500 mb-4">{award.issuer[language]}</p>
                 <p className="text-sm text-slate-600 leading-relaxed">{award.description[language]}</p>
               </div>

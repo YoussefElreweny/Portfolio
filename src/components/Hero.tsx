@@ -36,6 +36,20 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
               {t.subheadline}
             </p>
 
+            <div className="flex items-center gap-4 p-3 pe-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-white flex items-center justify-center">
+                <img
+                  src="/assets/logos/asu-engineering.png"
+                  alt="Faculty of Engineering, Ain Shams University logo"
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-bold text-slate-950 leading-snug">{t.degree}</p>
+                <p className="text-sm text-slate-500">{t.school}</p>
+              </div>
+            </div>
+
             <div className="flex items-center gap-6 pt-4">
               <a
                 href="#projects"

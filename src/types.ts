@@ -83,6 +83,7 @@ export interface TimelineEntry {
   organization: Localized;
   period: Localized;
   description: Localized;
+  logo?: string;
 }
 
 export type PublicationStatus = 'peer-reviewed' | 'in-press' | 'talk';

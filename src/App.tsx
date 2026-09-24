@@ -5,13 +5,15 @@ import { AboutSection } from './components/AboutSection.tsx';
 import { FeaturedProjects } from './components/FeaturedProjects.tsx';
 import { TechnicalWork } from './components/TechnicalWork.tsx';
 import { ExperienceSection } from './components/ExperienceSection.tsx';
-import { ResearchSection } from './components/ResearchSection.tsx';
+import { ResearchPage, ResearchPreview } from './components/ResearchSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { WhatsAppButton } from './components/WhatsAppButton.tsx';
 import { projects, technicalProjects } from './data/projects.ts';
 import { experience, leadership, publications, awards } from './data/profile.ts';
 import { Language } from './types.ts';
+
+const isResearchPage = window.location.pathname.replace(/\/+$/, '') === '/research';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>(() => {
@@ -36,36 +38,45 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        <Hero
-          language={language}
-          onOpenResume={() => {}}
-        />
+        {isResearchPage ? (
+          <ResearchPage
+            publications={publications}
+            awards={awards}
+            language={language}
+          />
+        ) : (
+          <>
+            <Hero
+              language={language}
+              onOpenResume={() => {}}
+            />
 
-        <AboutSection
-          language={language}
-        />
+            <AboutSection
+              language={language}
+            />
 
-        <FeaturedProjects
-          projects={projects}
-          language={language}
-        />
+            <FeaturedProjects
+              projects={projects}
+              language={language}
+            />
 
-        <TechnicalWork
-          projects={technicalProjects}
-          language={language}
-        />
+            <TechnicalWork
+              projects={technicalProjects}
+              language={language}
+            />
 
-        <ExperienceSection
-          experience={experience}
-          leadership={leadership}
-          language={language}
-        />
+            <ExperienceSection
+              experience={experience}
+              leadership={leadership}
+              language={language}
+            />
 
-        <ResearchSection
-          publications={publications}
-          awards={awards}
-          language={language}
-        />
+            <ResearchPreview
+              publications={publications}
+              language={language}
+            />
+          </>
+        )}
 
         <ContactSection
           language={language}
