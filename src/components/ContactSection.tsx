@@ -48,7 +48,7 @@ interface ContactSectionProps {
 export const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
   const t = translations[language].contact;
   const isRtl = language === 'ar';
-  const emailAddress = 'y.reweny@gmail.com';
+  const emailAddress = t.email;
 
   return (
     <section id="contact" className="py-32 sm:py-48 bg-white border-t border-slate-100">
